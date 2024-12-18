@@ -1,0 +1,309 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  min-width: 1024px;
+  background: #2f353a;
+  color: #e4e7ea;
+  overflow-x: hidden;
+}
+
+/* Links */
+a {
+  text-decoration: none;
+  color: #3498db;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #1abc9c;
+}
+
+/* Header */
+header {
+  z-index: 10;
+  width: 100%;
+  padding: 15px 10px;
+  background: #3a4149;
+  border-bottom: 1px solid #23282c;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header h2 {
+  font-size: 1.4em;
+  font-weight: bold;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Sidebar */
+.sidebar {
+  float: left;
+  width: 170px;
+  background: #3b4149;
+  padding-top: 1rem;
+  border-right: 1px solid #23282c;
+}
+
+.sidebar .nav-title {
+  font-size: 1.2em;
+  font-weight: 700;
+  color: #e4e7ea;
+  text-align: center;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.sidebar .nav-item {
+  margin: 0;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.sidebar .nav-link {
+  display: block;
+  padding: 0.8em 1em;
+  color: #73818f;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border-radius: 3px;
+}
+
+.sidebar .nav-link.active,
+.sidebar .nav-link.active i {
+  background: #20a8d8;
+  color: #fff;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.sidebar .nav-link:hover:not(.active),
+.sidebar .nav-link:hover:not(.active) i {
+  background: #4a7b8d;
+  color: #fff;
+  transform: translateX(5px);
+}
+
+.sidebar .nav-link i {
+  margin-right: 10px;
+  font-size: 0.9em;
+  color: #73818f;
+  transition: color 0.3s ease;
+}
+
+/* Main Content */
+.main {
+  float: left;
+  width: calc(100% - 170px);
+  padding: 20px;
+  background: #2f353a;
+}
+
+.main > div {
+  display: none;
+}
+
+/* Home Section */
+.home .canvasContainer {
+  display: inline-block;
+  width: 49%;
+  margin: 30px 0;
+  background: #3e464d;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Flex Container */
+.flexContain {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+/* Product Image Hover */
+.hideImg td {
+  position: relative; /* Đảm bảo hình ảnh nằm đúng vị trí */
+}
+
+.hideImg td img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 0;
+  border-radius: 5px;
+  transition: height 0.2s ease-in-out;
+  z-index: 2;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Thêm bóng nhẹ cho ảnh */
+}
+
+.hideImg td:hover img {
+  height: 150px;
+}
+
+/* Table Styles */
+.table-outline {
+  width: 100%;
+  border: 1px solid #23282c;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+.table-header {
+    width: 100%;
+}
+
+.table-header th {
+  color: #e4e7ea;
+  background: #3e464d;
+  text-transform: uppercase;
+  font-size: 0.85em;
+  padding: 0.75rem;
+  border-bottom: 1px solid #23282c;
+  cursor: pointer;
+}
+
+.table-header th i {
+  transform: scale(0);
+  transition: transform 0.2s;
+}
+
+.table-header th:hover i {
+  transform: scale(1);
+}
+.table-footer {
+    background-color: #3e464d;
+    padding: .75rem;
+    vertical-align: top;
+    border-top: 1px solid #23282c;
+}
+
+.table-footer input,
+.table-footer button,
+.table-footer select {
+    padding: 5px 10px;
+    margin: 10px;
+    border: 3px solid transparent;
+    background-color: #cccece;
+}
+
+/* Nút bấm ở footer */
+.table-footer button {
+    cursor: pointer;
+    background-color: #23282c;
+    color: #e4e7ea;
+    transition-duration: .2s;
+}
+
+.table-footer button:hover {
+    background-color: #7a879486;
+    border-color: #73818f;
+}
+
+.table-content td {
+  padding: 0.75rem;
+  text-align: center;
+  color: #e4e7ea;
+  border-top: 1px solid #23282c;
+  font-size: 0.85em;
+  position: relative;
+}
+
+.table-content tr:nth-of-type(even) {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.table-content td a {
+  color: #1abc9c;
+  transition: color 0.3s ease;
+}
+
+.table-content td a:hover {
+  text-decoration: underline;
+  color: #16a085;
+}
+
+/* Action Icons */
+.table-content td i {
+  font-size: 1.2em; /* Tăng kích thước icon */
+  padding: 0.4em;
+  cursor: pointer;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.table-content td i:hover {
+  transform: scale(1.2);
+}
+
+.table-content td i.fa-wrench:hover {
+  color: #63c2de;
+}
+
+.table-content td i.fa-trash:hover {
+  color: #f86c6b;
+}
+
+/* Edit Overlay (Form Sửa) */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  z-index: 14;
+  transition: 0.2s ease;
+  transform: scale(0);
+  background-color: #020202d8;
+}
+
+.overlayTable {
+  margin: 50px auto;
+  width: auto;
+  background-color: #23282c;
+}
+
+.overlayTable td:first-child {
+  text-align: right;
+}
+
+.overlayTable input {
+  padding: 4px 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #e7e7e7;
+}
+
+.overlayTable input[type="file"] {
+  background-color: transparent;
+}
+
+.close {
+  /* nút tắt form */
+  position: fixed;
+  top: 5px;
+  right: 5px;
+  font-size: 3rem;
+  width: 1em;
+  height: 1em;
+  line-height: 1em;
+  text-align: center;
+  color: #aaa;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.close:hover {
+  color: #fff;
+  background-color: #f33;
+  border-radius: 50%;
+}
